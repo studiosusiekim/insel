@@ -1,0 +1,129 @@
+.section-photo {
+   
+    padding: 0;
+    margin-top: -20vh;
+
+    @include respond(tab-port) {
+        padding :20rem 0;
+    }
+}
+
+
+
+.project {
+    position: relative;
+
+    &__photo {
+        margin-top:17%;
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 1rem;
+
+        @include respond(tab-port) {
+            margin: auto 0;
+            position: relative;
+            width:80%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+        }
+
+        &--m1 {
+            left: 0;
+            top: -7rem;
+
+            @include respond(tab-port) {
+                width: 86%;
+                top: 10rem;
+            
+                right:55%;
+                transform: scale(1.2);
+            }
+        }
+
+        &--m2 {
+            right: 10.5rem;
+            top: 4rem;
+
+            @include respond(tab-port) {
+                top: 22rem;
+                right:0%;
+                transform: scale(1.3);  
+                z-index:1000;
+            }
+        }
+
+        &--heading {
+            margin-top: -.3rem;
+
+
+            @include respond(tab-port) {
+                margin-top: 35.7rem;
+        }
+    }
+       
+
+        &--p4 {
+            right: 20%;
+            top: -5rem;
+
+            @include respond(tab-port) {
+                width: 82%;
+                top:68rem;
+                right:3%;
+                transform: scale(1.3);  
+            }
+        }
+
+        &--p5 {
+            left: 7%;
+            top: 10rem;
+
+            @include respond(tab-port) {
+                width: 97%;
+                top: -24rem;
+                left:-1rem;
+                transform: scale(1.1);
+                z-index:1000;
+            }
+        }
+
+
+        &:hover  {
+            outline: .6rem solid #E1E1E1;
+            transform: scale(1.35) translateY(1.5rem) translateX(1.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
+        }
+
+    
+        &--m2:hover {
+            outline: .6rem solid #B4D6E2;
+            transform: scale(1.65) translateY(1.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
+            }
+
+        &--p5:hover {
+        outline: .6rem solid #CEBAB9;
+        transform: scale(1.35) translateY(1.5rem);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+        z-index: 20;
+        }
+
+        &--p4:hover {
+            outline: .6rem solid #787F77;
+            transform: scale(1.35) translateY(1.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
+            }
+   
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+    }
+    //composition:hover composition__photo:not(:hover) {
+    }
+}
